@@ -1,0 +1,12 @@
+npx asb && near deploy
+
+near call neutrino.testnet setData '{\"data\": \"06e0e6637d27b2622ab52022db713ce2\", \"receiver\":\"xtest1.testnet\"}'  --account-id neutrino.testnet --gas=300000000000000
+
+near call neutrino.testnet getData '{\"sender\":\"neutrino.testnet\"}'  --account-id xtest1.testnet --gas=300000000000000
+
+near call neutrino.testnet updateData '{\"data\": \"5569f4657d9a704316b51a478ea6ea5145e6c0d8\"}'  --account-id neutrino.testnet --gas=300000000000000
+
+near call neutrino.testnet updateReceiver '{\"receiver\": \"xtest6.testnet\"}'  --account-id neutrino.testnet --gas=300000000000000
+
+near call neutrino.testnet getUpdateTimeStamp '{}'  --account-id xtest1.testnet --gas=300000000000000
+
